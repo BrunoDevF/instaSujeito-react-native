@@ -74,6 +74,7 @@ export default function App() {
       <FlatList
         showsVerticalScrollIndicator={false}
         data={feed}
+        keyExtractor={(item)=>item.id}
         renderItem={ ({item}) => <Lista data={item} /> }
       >
 
@@ -86,9 +87,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50
   },
   header:{
-    height: 55,
+    height: 68,
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
@@ -100,9 +102,8 @@ const styles = StyleSheet.create({
     elevation: 1
   },
   logo:{
-    padding:15,
-    height: 59,
-    width: 185
+    height: 49,
+    width: 154
   },
   send:{
     width: 23,
